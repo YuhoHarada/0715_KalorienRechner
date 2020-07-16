@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Kalorien Rechner</title>
+</head>
+<body>
+    <section id="hero">
+        <h1>Kalorien rechner</h1>
+        <h3>Körpergröße (cm)</h3>
+        <input type="number" name="" id="height">
+        <h3>Alter</h3>
+        <input type="number" name="" id="age">
+        <h3>Gewicht (kg)</h3>
+        <input type="number" name="" id="width">
+        <h3>Körperbau</h3>
+        <div>
+            <input type="radio" name="koeperbau" id="female" checked>
+            <label for="female">Weiblich</label>
+        </div>
+        <div>
+            <input type="radio" name="koeperbau" id="male">
+            <label for="male">Männlich</label>
+        </div>
+        <h3>Arbeits- und Freizeitaktivität</h3>
+        <select name="" id="staker">
+            <option value="0">Schlafen</option>
+            <option value="1">Nur sitzen oder liegen</option>
+            <option value="2" selected>
+                Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen Aktivität in der Freizeit, z.B. Büroarbeit
+            </option>
+            <option value="3">
+                Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B. Studierende, Fließbandarbeiter, Laboranten, Kraftfahrer
+            </option>
+            <option value="4">
+                Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer, Kellner, Handwerker, Mechaniker, Hausfrauen
+            </option>
+            <option value="5">
+                Körperlich anstrengende berufliche Arbeit
+            </option>
+        </select>
+        <input type="button" value="Submit" onclick="KalorienRechnung()">
+        <article id="result">
+            <table>
+                <tr>
+                    <th></th>
+                    <th>kcal</th>
+                    <th>kJ</th>
+                </tr>
+                <tr>
+                    <td>Grundumsatz</td>
+                    <td id="GrundKcal">-</td>
+                    <td id="GrundkJ">-</td>
+                </tr>
+                <tr>
+                    <td>Gesamtumsatz</td>
+                    <td id="GesamtKcal">-</td>
+                    <td id="GesamtkJ">-</td>
+                </tr>
+            </table>
+        </article>
+        <p>
+            Das Ergebnis des Rechners sollten Sie als Orientierungswert ansehen, da es verschiedene Fehlermögichkeiten gibt wie abweichender Grundumsatz, falsche Zeiteinschätzung etc.
+        </p>
+    </section>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
